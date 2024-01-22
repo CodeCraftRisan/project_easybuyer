@@ -538,7 +538,15 @@ class Add extends StatefulWidget {
               .collection("Busticketbook")
               .doc(widget.id)
               .update({
-
+            'name': username.text,
+            'age': age.text,
+            'mobileno': number.text,
+            'gender': selectedGender,
+            'fromcity': selectedFromCity,
+            'tocity': selectedToCity,
+            'bustype': selectedbustype,
+            'date': dateofJourney.text,
+            'userId': userId
           }).whenComplete(() {
             Get.snackbar(
                 'Update Bus-Ticket Book', 'Update Ticket book succesfully',
