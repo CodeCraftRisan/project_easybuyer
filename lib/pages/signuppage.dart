@@ -98,7 +98,7 @@ class _SignupPageState extends State<SignupPage> {
                               fillColor: Colors.grey.shade100,
                               filled: true,
                               border:  OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10)
+                                  borderRadius: BorderRadius.circular(12)
                               ),
                               labelText: 'Email',
                               hintText: 'Enter Your Email'
