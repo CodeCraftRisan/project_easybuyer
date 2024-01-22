@@ -179,3 +179,41 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   SizedBox(height: 10.0,),
                   // -------------Sign up text code--------------
+                  Container(
+                      child:Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Don't have an account ?",
+                              style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500,color: Colors.black),),
+                            TextButton(onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => SignupPage()),);
+                            }, child: Text("Sign Up",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.blueAccent),),)
+                          ],
+                        ),
+                      )),
+
+
+
+                  /* Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: MaterialButton(
+                          highlightColor: Colors.transparent,
+                          splashColor: Colors.white70,
+                          onPressed: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>SignupPage()),);
+
+                          }, child: Text("Sign Up",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),))
+                  ),*/
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
