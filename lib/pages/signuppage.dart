@@ -152,8 +152,8 @@ class _SignupPageState extends State<SignupPage> {
                           onTap: () => moveToLogin(context),
                           child: AnimatedContainer(
                             duration: Duration(seconds: 1),
-                            height: 50,
-                            width: changebutton ? 50 : 150,
+                            height: 60,
+                            width: changebutton ? 60 : 180,
                             alignment: Alignment.center,
                             child: changebutton ? Icon(Icons.done,color: Colors.white,) :Text("Sign Up",style: TextStyle(
                               fontSize: 18.0,
