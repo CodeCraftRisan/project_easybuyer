@@ -155,8 +155,8 @@ class _SignupPageState extends State<SignupPage> {
                             height: 60,
                             width: changebutton ? 60 : 180,
                             alignment: Alignment.center,
-                            child: changebutton ? Icon(Icons.done,color: Colors.white,) :Text("Sign Up",style: TextStyle(
-                              fontSize: 18.0,
+                            child: changebutton ? Icon(Icons.done,color: Colors.grey,) :Text("Sign Up",style: TextStyle(
+                              fontSize: 20.0,
                               fontWeight: FontWeight.bold,
                               color: Colors.white,),),
                             decoration: BoxDecoration(
