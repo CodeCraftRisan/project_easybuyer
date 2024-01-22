@@ -119,4 +119,40 @@ class AuthController extends GetxController {
   //     print(e);
   //   }
   // }
+  changePassword(String currentPassword, String newPassword) async {
+    try {
+      final user = FirebaseAuth.instance.currentUser;
+      final cred = EmailAuthProvider.credential(
+          email: user!.email.toString(), password: currentPassword);
+      user.reauthenticateWithCredential(cred).then((value) {
+        user.updatePassword(newPassword).then((_) {
+          Get.snackbar("Change Password", "Password successfully changed",
+              snackPosition: SnackPosition.BOTTOM);
+          // Get.offAll(const HomePage());
+        }).catchError((error) {
+          Get.snackbar("Something went wrong", error.toString(),
+              snackPosition: SnackPosition.BOTTOM);
+        });
+      }).catchError((err) {
+        Get.snackbar("Something went wrong", err.toString(),
+            snackPosition: SnackPosition.BOTTOM);
+      });
+    } catch (e) {
+      print(e);
+    }
+  }
+  logout() async {
+    try {
+      await FirebaseAuth.instance.signOut().then((value) async {
+        SharedPreferences preferences = await SharedPreferences.getInstance();
+        preferences.getString('userId') == "";
+        preferences.clear();
+        Get.offAll(const LoginPage());
+      });
+    } catch (e) {
+      Get.snackbar("Something went wrong", e.toString(),
+          snackPosition: SnackPosition.BOTTOM);
+    }
+  }
+}
 
