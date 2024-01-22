@@ -145,7 +145,7 @@ class _LoginPageState extends State<LoginPage> {
                     children: [
                       TextButton(onPressed: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context)=> ForgetPassword()));
-                      }, child: Text("Forgot Password?",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold ,color: Colors.blueAccent)),)
+                      }, child:  Text("Forgot Password?",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold ,color: Colors.blueAccent)),)
                     ],
                   ),
                   SizedBox(
@@ -158,7 +158,7 @@ class _LoginPageState extends State<LoginPage> {
                       duration: Duration(seconds: 1),
                       width:changebutton? 50: 150,
                       height: 50,
-                      alignment: Alignment.center,
+                      alignment:  Alignment.center,
                       child:changebutton? Icon(Icons.done):Text("Login",style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,fontSize: 18),),
@@ -171,7 +171,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   SizedBox(height: 20.0,),
                   Container(
-                    child: Column(
+                    child:  Column(
                       children: [
                         Text("---------- OR ----------",style: TextStyle(fontSize: 20, ),)
                       ],
@@ -179,41 +179,3 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   SizedBox(height: 10.0,),
                   // -------------Sign up text code--------------
-                  Container(
-                      child:Align(
-                        alignment: Alignment.bottomCenter,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text("Don't have an account ?",
-                              style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500,color: Colors.black),),
-                            TextButton(onPressed: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => SignupPage()),);
-                            }, child: Text("Sign Up",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.blueAccent),),)
-                          ],
-                        ),
-                      )),
-
-
-
-                  /* Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: MaterialButton(
-                          highlightColor: Colors.transparent,
-                          splashColor: Colors.white70,
-                          onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>SignupPage()),);
-
-                          }, child: Text("Sign Up",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),))
-                  ),*/
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
