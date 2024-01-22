@@ -48,6 +48,20 @@ class Add extends StatefulWidget {
     'Dhaka',
     'Farmgate',
     'Rampura',
+    'Mirpur',
+    'Gulshan',
+    'Dhaka Cantonment',
+    'Motijheel',
+    'New Market',
+    'Paltan',
+    'Khilgaon',
+    'Khilkhet',
+    'Ramna',
+    'Sabujbag',
+    'Uttara',
+    'Tejgaon'
+        'Gazipur',
+    'Abdullahpur',
 
 
   ];
@@ -56,6 +70,22 @@ class Add extends StatefulWidget {
   List<String> get ToCity => [
     'Gazipur',
     'Abdullahpur',
+    'Dhaka',
+    'Farmgate',
+    'Rampura',
+    'Mirpur',
+    'Gulshan',
+    'Dhaka Cantonment',
+    'Motijheel',
+    'New Market',
+    'Paltan',
+    'Khilgaon',
+    'Khilkhet',
+    'Ramna',
+    'Sabujbag',
+    'Uttara',
+    'Tejgaon'
+
 
   ];
   String? selectedbustype;
