@@ -138,8 +138,8 @@ class _SignupPageState extends State<SignupPage> {
                             if (value!.isEmpty){
                               return "Password cannot be Empty";
                             }
-                            else if(value.length < 6){
-                              return "Password length should be atleast 6";
+                            else if(value.length < 8){
+                              return "Password length should be atleast 8";
                             }
                             return null;
                           },
