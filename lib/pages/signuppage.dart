@@ -58,7 +58,7 @@ class _SignupPageState extends State<SignupPage> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text('Sign Up',style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.blueGrey)),
+                      Text('Sign Up',style: TextStyle(fontSize: 25,fontWeight: FontWeight.normal,color: Colors.blueGrey)),
                     ],
                   ),
                 ),
