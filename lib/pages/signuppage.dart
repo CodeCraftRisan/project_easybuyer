@@ -48,7 +48,7 @@ class _SignupPageState extends State<SignupPage> {
             key: _formkey,
             child: Column(
               children: [
-                Image.asset("assets/Images/Sign_in.png ",fit: BoxFit.cover,),
+                Image.asset("assets/Images/Sign_in.jpg ",fit: BoxFit.cover,),
                 SizedBox(
                   height: 25.0,
                 ),
