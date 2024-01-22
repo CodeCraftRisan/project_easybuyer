@@ -67,7 +67,7 @@ class _SignupPageState extends State<SignupPage> {
                 ),
                 // -----------------TextFormFiled For Name ,Username and Password------------------------
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 18),
+                  padding: const EdgeInsets.symmetric(   vertical: 18 , horizontal: 35, ),
                   child: Container(
                     child: Column(
                       children: [
