@@ -48,7 +48,7 @@ class _SignupPageState extends State<SignupPage> {
             key: _formkey,
             child: Column(
               children: [
-                Image.asset("assets/Images/Sign_in.png",fit: BoxFit.cover,),
+                Image.asset("assets/Images/Sign_in.png ",fit: BoxFit.cover,),
                 SizedBox(
                   height: 25.0,
                 ),
@@ -58,7 +58,7 @@ class _SignupPageState extends State<SignupPage> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text('Sign Up',style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.black)),
+                      Text('Sign Up',style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.blueGrey)),
                     ],
                   ),
                 ),
