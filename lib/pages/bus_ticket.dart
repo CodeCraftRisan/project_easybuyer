@@ -74,7 +74,7 @@ class Add extends StatefulWidget {
   final _formkey = GlobalKey<FormState>();
 
 // navigation and animation button code
-  moveToHome(BuildContext context) async{
+ /* moveToHome(BuildContext context) async{
     if(_formkey.currentState!.validate()) {
       setState(() {
         changebutton = true;
@@ -85,7 +85,7 @@ class Add extends StatefulWidget {
         changebutton = false;
       });
     }
-  }
+  }*/
 
   @override
   void initState() {
