@@ -1,14 +1,24 @@
-plugins {
-    id "com.android.application"
-    id "com.google.gms.google-services"
 
-    id "kotlin-android"
-    id "dev.flutter.flutter-gradle-plugin"
+//buildscript {
+// ext.kotlin_version = '1.9.0'
+//  repositories {
+//    google()
+//     mavenCentral()
+//  }
+
+buildscript {
+    ext.kotlin_version = '1.6.10'
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.1.2' // Change to appropriate version
+        classpath 'com.google.gms:google-services:4.3.15'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"// Add this line
+    }
 }
-
-
-
-
 
 
 allprojects {
