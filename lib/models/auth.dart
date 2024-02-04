@@ -12,7 +12,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 
 // creating firebase instance
-/*
+
 final FirebaseAuth auth = FirebaseAuth.instance;
 
 Future<void> signup(BuildContext context) async {
@@ -32,9 +32,9 @@ Future<void> signup(BuildContext context) async {
     if( result != null){
       Navigator.push(context,MaterialPageRoute(builder: (context)=> HomePage()),);
     }
-    // if (result != null) {
-    // Navigator.push(
-    //    context, MaterialPageRoute(builder: (context) => HomePage()));
+     if (result != null) {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => HomePage()));
   }  // if result not null we simply call the MaterialpageRoute,
   // for go to the HomePage screen
 }
