@@ -1,13 +1,26 @@
 import 'package:bus_ticket_booking_app/pages/loginpage.dart';
 import 'package:bus_ticket_booking_app/widgets/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
-
+import 'package:awesome_notifications/awesome_notifications.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  await AwesomeNotifications().initialize(null, [
+    // Create the notification channel
+    NotificationChannel(
+      channelKey: 'basic_channel',
+      channelName: 'Basic notifications',
+      channelDescription: 'Notification channel for basic tests',
+      defaultColor: Color(0xFF9D50DD),
+      ledColor: Colors.white,
+    )
+  ]);
+
+  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
   runApp(const MyApp());
 }
 /*void main() {
@@ -81,8 +94,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }*/
 
-
-
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -105,3 +116,22 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// Notification functions
+void Notify() async {
+  // Create a local notification
+  await AwesomeNotifications().createNotification(
+    content: NotificationContent(
+      id: 10,
+      channelKey: 'basic_channel',
+      title: 'Simple Notification',
+      body: 'Simple body',
+      // Uncomment if you have the image asset:
+      // bigPicture: 'assets://images/protocoderlogo.png'
+    ),
+  );
+}
+
+Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+  print("Handling a background message: ${message.messageId}");
+  await AwesomeNotifications().createNotificationFromJsonData(message.data);
+}
